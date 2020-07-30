@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Comments Page</title>
+		
+		<link rel="stylesheet" type="text/css" href="/css/articles.css">
+		
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+				var username = /*[[${username}]]*/ "Test";
+				/*]]>*/
+		</script>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
+    	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+		<script type="text/javascript" src="/js/articles-validation.js"></script>
+	</head>
+	<body>
+		<div class="body-section">
+			<div class="main-comment">
+				<div class="commentdiv">
+					<div class="commentpanel">
+					
+						<div class="comment-header">
+							<h1>Create New Comments</h1>
+						</div>
+						
+						<p id="success" class="success-comment">Comments has been saved successfully.</p>
+						
+						<div class="comment-body">
+							<div class="comment-form">
+								<form id="commentForm" name="commentForm" method="post" action="">
+									<div class="comment-box">
+										<div class="author">
+											<label>Author</label>
+											<input type="text" class="comment-input" id="author" name="author" value="" disabled/>
+											<input type="hidden" name="author_name" id="author_name" value="" />
+										</div>
+										<div class="title">
+											<label>Title</label>
+											<input type="text" class="comment-input" id="title" name="title" placeholder="Title">
+										</div>
+										<div class="body">
+											<label>Body</label>
+											<textarea name="message" rows="10" cols="30" class="comment-input" id="message" placeholder="Enter your own comments."></textarea>
+										</div>
+										<div>
+											<input type="submit" id="comment-submit" value="Submit" class="comment-button">
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
